@@ -72,7 +72,7 @@ def gaussian(x, mu, fwhm):
 
 
 def resample_spectra(spectra, src_waves, dst_waves, dst_fwhms, src_fwhms=None):
-    """ Return a set of coeffiencients for spectrum resampling.
+    """Resample spectra to a new wavelength grid.
 
     Notes
     -----
@@ -97,8 +97,7 @@ def resample_spectra(spectra, src_waves, dst_waves, dst_fwhms, src_fwhms=None):
     Returns
     -------
     ndarray
-        m x n matrix of coeffiecients, where m is the number of source wavelengths
-        and n is the number of destination wavelengths.
+        Resampled spectra aligned to ``dst_waves``.
     """
 
     if src_fwhms is None:
@@ -136,7 +135,7 @@ def resample_spectra(spectra, src_waves, dst_waves, dst_fwhms, src_fwhms=None):
 
 
 def get_closest_wave(waves, center_wave):
-    """ Get the band index whose wavelength is closest to `center_wav`.
+    """Get the band index whose wavelength is closest to ``center_wave``.
 
     Parameters
     ----------
