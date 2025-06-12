@@ -33,8 +33,10 @@ def get_sun_earth_distance(when):
 
     import numpy as np
     cur_dir = os.path.dirname(os.path.realpath(__file__))
-    sun_earh_distance_file = os.path.abspath(os.path.join(cur_dir, os.pardir, 'data/solar-data/sun_earth_distance.dat'))
-    d = np.loadtxt(sun_earh_distance_file)
+    sun_earth_distance_file = os.path.abspath(
+        os.path.join(cur_dir, os.pardir, 'data/solar-data/sun_earth_distance.dat')
+    )
+    d = np.loadtxt(sun_earth_distance_file)
     doy = when.timetuple().tm_yday
     d = d[doy-1]
 
